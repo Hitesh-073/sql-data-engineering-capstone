@@ -29,3 +29,14 @@ CREATE TABLE Orders
     TotalAmount DECIMAL(10,2),
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
+
+CREATE TABLE OrderItems
+(
+    OrderItemID INT IDENTITY PRIMARY KEY,
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    Price DECIMAL(10,2),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
