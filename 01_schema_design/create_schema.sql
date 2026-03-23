@@ -18,7 +18,7 @@ CREATE TABLE Products
     ProductID INT IDENTITY PRIMARY KEY,
     ProductName VARCHAR(100),
     Category VARCHAR(50),
-    UnitPrice DECIMAL(10,2)
+    Price DECIMAL(10,2)
 );
 
 CREATE TABLE Orders
