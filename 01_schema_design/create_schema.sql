@@ -18,7 +18,7 @@ CREATE TABLE Products
     ProductID INT IDENTITY PRIMARY KEY,
     ProductName VARCHAR(100),
     Category VARCHAR(50),
-    Price DECIMAL(10,2)
+    UnitPrice DECIMAL(10,2)
 );
 
 CREATE TABLE Orders
@@ -36,7 +36,7 @@ CREATE TABLE OrderItems
     OrderID INT,
     ProductID INT,
     Quantity INT,
-    Price DECIMAL(10,2),
+    UnitPrice DECIMAL(10,2),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
