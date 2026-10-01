@@ -2,3 +2,11 @@
 .venv/
 venv/
 tempCodeRunnerFile.py
+
+# Python generated files
+__pycache__/
+*.pyc
+
+# ETL generated data
+03_sample_data/01_raw_fetch/raw_data/*.json
+03_sample_data/02_staging/staged_data/*.json
